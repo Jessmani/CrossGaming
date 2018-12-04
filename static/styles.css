@@ -1,0 +1,319 @@
+@font-face {
+    font-family: "Bebas Neue";
+    src: url("BebasNeue-Regular.ttf") format("truetype");
+}
+
+body {
+    width: 50%;
+    margin:auto;
+    background-image: url("bg.jpg")
+}
+
+.messageindb {
+    color:black;
+    background-color: white;
+    padding: 40px;
+    border: 1px dashed grey;
+    text-align:center;
+    font-size:1vw;
+}
+
+.envoiemessage {
+    color:black;
+    background-color: white;
+    padding: 40px;
+    border: 1px dashed grey;
+    text-align:center;
+    font-size:1vw;
+}
+
+#bloc-challenge {
+    display:inline-block;
+    color: white;
+    width:50%;
+    text-align:center;
+}
+
+#bloc-friends {
+    margin-top: 25px;
+    border-radius: 10px;
+    width:49%;
+    background-color: rgba(122, 254, 236, 0.5);
+    height:200px;
+    float:right;
+}
+
+#tchat {
+    height: 200px;
+    width:100%;
+    background-color: red;
+}
+
+#chatbox {
+    background-color:rgba(122, 254, 236, 0.5);
+    width: 100%;
+    display: inline-block;
+    border:1px solid black;
+    overflow-y: scroll;
+    height: 400px;
+}
+
+#selectionamis {
+    background-color:white;
+    width: 48%;
+    float:right;
+    border:1px solid black;
+}
+
+#tchatbar {
+    width: 99%;
+    height: 20px;
+    margin: 1px;
+    padding:0;
+    border:1px solid black;
+}
+
+#livemessages {
+    display: inline-block;
+    height:350px;
+}
+
+#envoyer {
+    border: 0;
+    display:inline-block;
+    margin: auto;
+}
+
+textarea { 
+    border-style: none; 
+    border-color: Transparent; 
+    overflow: auto;  
+    resize: none;      
+  }
+
+#header {
+    background: url("banner.jpg");
+    width: 100%;
+    height: 230px;
+}
+
+#messagefromserver {
+    color: white;
+}
+
+#banner {
+    background: url("bannerbg.jpg");
+    width:25%;
+}
+
+#challenge {
+    display: inline-block;
+    /*margin:auto;*/
+}
+
+#asktoplay {
+    background-color: rgba(122, 254, 236, 0.7);
+    border-radius: 10px;
+    width: 100%;
+    /*margin: auto;/*
+    /*display: inherit;*/
+    margin-top: 25px;
+    height: 140px;
+}
+
+textarea[placeholder]
+{
+    text-align: center;
+}
+
+#still-registered {
+    padding-bottom: 3%;
+    padding-left: 1%;
+    padding-right: 1%;
+    float: left;
+    display: inline-block;
+    width: 45%;
+}
+
+#connectionerror {
+    display: none;
+    margin-top: 2%;
+    font-size: 0.9vw;
+    color: red;
+    font-style: italic;
+}
+
+#cant-play {
+    display: none;
+    margin-top: 2%;
+    font-size: 0.9vw;
+    color: red;
+    font-style: italic;
+}
+
+#still-connected {
+    display: none;
+    margin-top: 2%;
+    font-size: 0.9vw;
+    color: red;
+    font-style: italic;
+}
+
+#registration-error {
+    display: none;
+    margin-top: 2%;
+    font-size: 0.9vw;
+    color: red;
+    font-style: italic;
+}
+
+.title-registered {
+    font-size: 2vw;
+    text-decoration: underline;
+}
+
+#connection {
+    margin-left: auto; 
+    margin-right: auto;
+    left: 0; 
+    right: 0;
+    border-radius: 6px;
+    width: 50%;
+    position: absolute;
+    font-family: "Bebas Neue", Verdana, Impact, sans-serif;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+#new-user {
+    display: block;
+    padding-bottom: 3%;
+    padding-left: 1%;
+    padding-right: 1%;
+    width: 45%;
+    float: right;
+}
+
+.label-size {
+    font-size: 1.3vw;
+}
+
+.input-size {
+    margin-left: 25%;
+}
+
+.input-size-play {
+    display: none;
+    margin: auto;
+    margin-top: 4%;
+    height: 50px;
+    width: 80%;
+}
+
+#myaccount {
+    margin:auto;
+    display:none;
+}
+
+#passwordConnection {
+    margin-left: 8.4%;
+}
+
+#passwordRegistration {
+    margin-left: 8.6%;
+}
+
+#emailRegistration {
+    margin-left: 22.4%;
+}
+
+#validregistration {
+    margin-top: 5%;
+}
+
+#validconnection {
+    margin-top: 12%;
+}
+
+#ajouter {
+    display:none;
+    background-color: white;
+    padding: 10px;
+    float: right;
+    clear: both;
+}
+
+/*#followers {
+    float: right;
+    clear:both;
+    margin: 0;
+    display:inline-block;
+    color:white;
+}*/
+
+#name {
+    float: right;
+    font-family: "Bebas Neue", Verdana, Impact, sans-serif;
+    font-size: 3vw;
+    display:inline-block;
+    color:white;
+    clear:both;
+}
+
+#avatar {
+    display:inline-block;
+    margin-left: 50px;
+    margin-top: 5px;
+}
+#banner {
+    margin:auto;
+    width:100%;
+    height:150px;
+    display:none;
+    background-color: rgba(197, 197, 197, 0.5);
+}
+
+#seekfriends {
+    color:white;
+}
+
+.friends {
+    font-family: "Bebas Neue", Verdana, Impact, sans-serif;
+}
+
+#friends {
+    width: 30%;
+}
+
+#blocsearchfriends {
+    width: 100%;
+    text-align:center;
+    display: inline-block;
+}
+
+#loupe {
+    width: 1.5%;
+    padding-right: 8px;
+}
+
+#friendfind {
+    color:white;
+    font-size: 1vw;
+    margin: auto;
+}
+
+#addasfriend {
+    display: none;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: white;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: white;
+}

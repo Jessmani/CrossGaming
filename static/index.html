@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Geek Online : Le point de rencontre des Geeks !</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <script src="static/socket.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <div id="header">
+        <p id="return">Retourner sur mon profil</p>
+        <div id="blocsearchfriends"><label id="seekfriends">Recherchez un ami : </label><input type="text" id="friends"> <img src="static/loupe.png" alt="loupe" id="loupe"><input type="submit" value="Lancer ma recherche" id="buttonvalidseekfriends">
+            <p id="friendfind" style="cursor:pointer;"></p>
+            <input type="submit" value="Défier" id="addasfriend">
+        </div>
+        <div id="name"></div>
+    </div>
+
+    <p id="users-online"></p>
+    <div id="myaccount">
+        <div id="banner">
+            <div id="avatar">
+                <img src="/static/noob.png" alt="Noob" id="avatarimg">
+            </div>
+                  
+            <img src="static/pc.png" alt="joueur pc" id="pc">
+            <img src="static/ps4.png" alt="joueur ps4" id="ps4">
+            
+            <p id="ajouter" style="cursor:pointer;">Proposer un duel</p>
+            <p id="demandedajout"></p>  
+            <img src="/static/refuse.png" alt="refuse" style="width:2%; float: right; clear:both; cursor:pointer;" id="refuse"> 
+            <img src="/static/accept.png" alt="accept" style="width:2%; float: right; cursor:pointer;" id="accept">
+        </div>
+        
+        <div id="bloc-challenge">
+            <textarea id="asktoplay" type="text" placeholder="Proposer une partie à vos amis, préciser le type de plateforme sur lequel vous souhaitez jouer !"></textarea>
+            <img src="/static/challenge.png" alt="Logo" style="cursor:pointer;" id="challenge">
+        </div>
+        <div id="bloc-friends"></div>
+
+        <div id="messagefromserver"></div>
+        <div id="bloc-message"></div>
+      
+        <div id="chatbox">
+            <div id="livemessages">
+
+            </div>
+            <textarea id="tchatbar"></textarea>
+            <!--<input type="submit" value="Envoyer" id="envoyer">-->
+            <img src="/static/envoyer.png" alt="Logo" style="cursor:pointer;" id="envoyer">
+        </div>
+
+        <!--<div id="selectionamis">
+
+        </div>  -->
+    </div>  
+
+    <div id="connection">
+        <div id="still-registered">
+            <p class="title-registered">Déjà inscrit ?</p>
+            <form method="POST" action="/connection" id="connection-form">
+                <label class="label-size">Nom : </label><input class="input-size" type="text" name="login" id="loginConnection"/><br/>
+                <label class="label-size">Mot de passe : </label>
+                <input id="passwordConnection" type="password" name="password"/><br/>
+                <input id="validconnection" type="submit" value="Me connecter" /><br/>
+                <p id="connectionerror"></p>
+                <p id="cant-play"></p>
+                <p id="still-connected"></p>
+            </form>
+        </div>
+        <div id="new-user">
+            <p class="title-registered">Inscription</p>
+            <form method="POST" action="/registration" id="registration-form">
+                <label class="label-size">Nom : </label>
+                <input class="input-size" type="text" name="login" id="loginRegistration" maxlength="9" /><br/>
+                <label class="label-size">Mot de passe : </label><input id="passwordRegistration" type="password" name="password"/><br/>
+                <label class="label-size">Email : </label><input id="emailRegistration" type="email" name="mail" /><br/>
+                <input id="validregistration" type="submit" value="M'inscrire"/>
+                <p id="registration-error"></p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
