@@ -2,7 +2,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
     // - V A R I A B L E S - //
 
-    var webSocketConnection = io('localhost:8000');
+    var webSocketConnection = io('"https://crossgaming.herokuapp.com/index"');
     var connectionForm = document.getElementById('connection-form');
     var registrationForm = document.getElementById('registration-form');
     var name = document.getElementById("name");
