@@ -29,7 +29,7 @@ io.on('connection', function(webSocketConnection) {
     // -  I N S C R I P T I O N - //
 
     webSocketConnection.on('registration', function(dataSocket) {
-        MongoClient.connect("mongodb://jessmani:azertyuiop75$@ds061196.mlab.com:61196/heroku_lmkffzfs", { useNewUrlParser: true }, function(err, database) {
+        MongoClient.connect("mongodb://jessmani:azertyuiop75$@ds139992.mlab.com:39992/heroku_z7glj4q8", { useNewUrlParser: true }, function(err, database) {
             if(err) {
                 return console.log("Erreur ");
             } 
@@ -46,7 +46,7 @@ io.on('connection', function(webSocketConnection) {
                 }
             }
 
-            const myDb = database.db("heroku_lmkffzfs");
+            const myDb = database.db("heroku_z7glj4q8");
             const collection = myDb.collection("users");
 
             collection.find().toArray(function(err, dataDB) {
@@ -81,12 +81,12 @@ io.on('connection', function(webSocketConnection) {
 
     webSocketConnection.on('login', function(dataSocket) {
 
-        MongoClient.connect("mongodb://jessmani:azertyuiop75$@ds061196.mlab.com:61196/heroku_lmkffzfs", { useNewUrlParser: true }, function(err, database) {
+        MongoClient.connect("mongodb://jessmani:azertyuiop75$@ds139992.mlab.com:39992/heroku_z7glj4q8", { useNewUrlParser: true }, function(err, database) {
             if(err) {
                 return console.log("Erreur de connection");
             }
     
-            const myDb = database.db("heroku_lmkffzfs");
+            const myDb = database.db("heroku_z7glj4q8");
             const collection = myDb.collection("users");
     
             collection.find().toArray(function(err, dataDB) {
@@ -150,12 +150,12 @@ io.on('connection', function(webSocketConnection) {
     // ECHANGE DU PSEUDO ENTRE LE FRONT ET LE BACK
     webSocketConnection.on("SendPseudoToServer", function(dataSocket) { // Je reçois le pseudonyme
         console.log(dataSocket.pseudo);
-        MongoClient.connect("mongodb://jessmani:azertyuiop75$@ds061196.mlab.com:61196/heroku_lmkffzfs", { useNewUrlParser: true }, function(err, database) {
+        MongoClient.connect("mongodb://jessmani:azertyuiop75$@ds139992.mlab.com:39992/heroku_z7glj4q8", { useNewUrlParser: true }, function(err, database) {
             if(err) {
                 return console.log("Erreur de connection");
             }
 
-            const myDb = database.db("heroku_lmkffzfs");
+            const myDb = database.db("heroku_z7glj4q8");
             const collection = myDb.collection("users");
 
             collection.find().toArray(function(err, dataDB) {
@@ -184,12 +184,12 @@ io.on('connection', function(webSocketConnection) {
     //////////////////////// RECHERCHER UN AMI /////////////////////////////////////////////////
     webSocketConnection.on("resultfriends", function(dataSocket) { // je reçois le nom de l'ami recherché
         //console.log(dataSocket.result);
-        MongoClient.connect("mongodb://jessmani:azertyuiop75$@ds061196.mlab.com:61196/heroku_lmkffzfs", { useNewUrlParser: true }, function(err, database) {
+        MongoClient.connect("mongodb://jessmani:azertyuiop75$@ds139992.mlab.com:39992/heroku_z7glj4q8", { useNewUrlParser: true }, function(err, database) {
             if(err) {
                 return console.log("Erreur de connection");
             }
     
-            const myDb = database.db("heroku_lmkffzfs");
+            const myDb = database.db("heroku_z7glj4q8");
             const collection = myDb.collection("users");
 
             collection.find().toArray(function(err, dataDB) {
@@ -217,12 +217,12 @@ io.on('connection', function(webSocketConnection) {
     })  
 
     webSocketConnection.on("platformchoice", function(dataSocket) {
-        MongoClient.connect("mongodb://jessmani:azertyuiop75$@ds061196.mlab.com:61196/heroku_lmkffzfs", { useNewUrlParser: true }, function(err, database) {
+        MongoClient.connect("mongodb://jessmani:azertyuiop75$@ds139992.mlab.com:39992/heroku_z7glj4q8", { useNewUrlParser: true }, function(err, database) {
             if(err) {
                 return console.log("Erreur de connection");
             }
 
-            const myDb = database.db("heroku_lmkffzfs");
+            const myDb = database.db("heroku_z7glj4q8");
             const collection = myDb.collection("users");
 
             collection.find().toArray(function(err, dataDB) {
@@ -252,12 +252,12 @@ io.on('connection', function(webSocketConnection) {
     webSocketConnection.on("userchallenge", function(dataSocket) {
         //webSocketConnection.on('disconnect', function() { 
             console.log("data from socket : ", dataSocket)
-            MongoClient.connect("mongodb://jessmani:azertyuiop75$@ds061196.mlab.com:61196/heroku_lmkffzfs", { useNewUrlParser: true }, function(err, database) {
+            MongoClient.connect("mongodb://jessmani:azertyuiop75$@ds139992.mlab.com:39992/heroku_z7glj4q8", { useNewUrlParser: true }, function(err, database) {
                 if(err) {
                     return console.log("Erreur de connection");
                 }
 
-                const myDb = database.db("heroku_lmkffzfs");
+                const myDb = database.db("heroku_z7glj4q8");
                 const collection = myDb.collection("users");
 
                 collection.find().toArray(function(err, dataDB) {
@@ -287,12 +287,12 @@ io.on('connection', function(webSocketConnection) {
 
     ///////////////////////// JE DEMANDE UN UTILISATEUR EN AMI ////////////////////////////
     webSocketConnection.on("requestfriend", function(dataFromSocket) {
-        MongoClient.connect("mongodb://jessmani:azertyuiop75$@ds061196.mlab.com:61196/heroku_lmkffzfs", { useNewUrlParser: true }, function(err, database) {
+        MongoClient.connect("mongodb://jessmani:azertyuiop75$@ds139992.mlab.com:39992/heroku_z7glj4q8", { useNewUrlParser: true }, function(err, database) {
             if(err) {
                 return console.log("Erreur de connection");
             }
 
-            const myDb = database.db("heroku_lmkffzfs");
+            const myDb = database.db("heroku_z7glj4q8");
             const collection = myDb.collection("users");
 
             collection.find().toArray(function(err, dataDB) {
@@ -343,12 +343,12 @@ io.on('connection', function(webSocketConnection) {
 
     ////////////// J'ACCEPTE LA DEMANDE EN AMI //////////////////////
     webSocketConnection.on("accepter", function(dataFromSocket) {
-        MongoClient.connect("mongodb://jessmani:azertyuiop75$@ds061196.mlab.com:61196/heroku_lmkffzfs", { useNewUrlParser: true }, function(err, database) {
+        MongoClient.connect("mongodb://jessmani:azertyuiop75$@ds139992.mlab.com:39992/heroku_z7glj4q8", { useNewUrlParser: true }, function(err, database) {
             if(err) {
                 return console.log("Erreur de connection");
             }
 
-            const myDb = database.db("heroku_lmkffzfs");
+            const myDb = database.db("heroku_z7glj4q8");
             const collection = myDb.collection("users");
 
             // Ajout dans la liste d'amis de la personne qui a reçu et accepter l'invitation
@@ -431,12 +431,12 @@ io.on('connection', function(webSocketConnection) {
         // test si le nom existe dans ma BDD, je récupère toutes les infos, je les renvoie au front et je remplace toutes les infos de mon profil par celle de l'utilisateur sur lequel j'ai cliqué
         console.log("dataFromSocket.friendsclick", dataFromSocket.friendsclick)
 
-        MongoClient.connect("mongodb://jessmani:azertyuiop75$@ds061196.mlab.com:61196/heroku_lmkffzfs", { useNewUrlParser: true }, function(err, database) {
+        MongoClient.connect("mongodb://jessmani:azertyuiop75$@ds139992.mlab.com:39992/heroku_z7glj4q8", { useNewUrlParser: true }, function(err, database) {
             if(err) {
                 return console.log("Erreur de connection");
             }
 
-            const myDb = database.db("heroku_lmkffzfs");
+            const myDb = database.db("heroku_z7glj4q8");
             const collection = myDb.collection("users");
 
             collection.find().toArray(function(err, dataDB) {
@@ -458,14 +458,14 @@ io.on('connection', function(webSocketConnection) {
     /* CLIQUE SUR UN AMI DANS MA LISTE SUR LE TCHAT */
 
     webSocketConnection.on("friendclicked", function(dataFromSocket) {
-        MongoClient.connect("mongodb://jessmani:azertyuiop75$@ds061196.mlab.com:61196/heroku_lmkffzfs", { useNewUrlParser: true }, function(err, database) {
+        MongoClient.connect("mongodb://jessmani:azertyuiop75$@ds139992.mlab.com:39992/heroku_z7glj4q8", { useNewUrlParser: true }, function(err, database) {
             if(err) {
                 return console.log("Erreur de connection");
             }
 
             console.log("dataFromSocket.messagesentinlive", dataFromSocket.messagesentinlive);
 
-            const myDb = database.db("heroku_lmkffzfs");
+            const myDb = database.db("heroku_z7glj4q8");
             const collection = myDb.collection("users");
 
             /* splice(position, numberOfItemsToRemove, item)
@@ -513,12 +513,12 @@ io.on('connection', function(webSocketConnection) {
     });
 
     webSocketConnection.on("nameOfThePersonThatClick", function(dataFromSocket) {
-        MongoClient.connect("mongodb://jessmani:azertyuiop75$@ds061196.mlab.com:61196/heroku_lmkffzfs", { useNewUrlParser: true }, function(err, database) {
+        MongoClient.connect("mongodb://jessmani:azertyuiop75$@ds139992.mlab.com:39992/heroku_z7glj4q8", { useNewUrlParser: true }, function(err, database) {
             if(err) {
                 return console.log("Erreur de connection");
             }
 
-            const myDb = database.db("heroku_lmkffzfs");
+            const myDb = database.db("heroku_z7glj4q8");
             const collection = myDb.collection("users");
             console.log("dataFromSocket.nameoftheseeker : ", dataFromSocket.nameoftheseeker)
             collection.find().toArray(function(err, dataDB) { 
@@ -535,12 +535,12 @@ io.on('connection', function(webSocketConnection) {
     })
 
     webSocketConnection.on("userdeleted", function(dataFromSocket) {
-        MongoClient.connect("mongodb://jessmani:azertyuiop75$@ds061196.mlab.com:61196/heroku_lmkffzfs", { useNewUrlParser: true }, function(err, database) {
+        MongoClient.connect("mongodb://jessmani:azertyuiop75$@ds139992.mlab.com:39992/heroku_z7glj4q8", { useNewUrlParser: true }, function(err, database) {
             if(err) {
                 return console.log("Erreur de connection");
             }
 
-            const myDb = database.db("heroku_lmkffzfs");
+            const myDb = database.db("heroku_z7glj4q8");
             const collection = myDb.collection("users");
 
             console.log("dataFromSocket.userdeleted : ", dataFromSocket.userdeleted)
@@ -559,12 +559,12 @@ io.on('connection', function(webSocketConnection) {
     });
 
     webSocketConnection.on("seconduserdeleted", function(dataFromSocket) {
-        MongoClient.connect("mongodb://jessmani:azertyuiop75$@ds061196.mlab.com:61196/heroku_lmkffzfs", { useNewUrlParser: true }, function(err, database) {
+        MongoClient.connect("mongodb://jessmani:azertyuiop75$@ds139992.mlab.com:39992/heroku_z7glj4q8", { useNewUrlParser: true }, function(err, database) {
             if(err) {
                 return console.log("Erreur de connection");
             }
 
-            const myDb = database.db("heroku_lmkffzfs");
+            const myDb = database.db("heroku_z7glj4q8");
             const collection = myDb.collection("users");
 
             console.log("dataFromSocket.userdeleted : ", dataFromSocket.userdeleted)
@@ -583,12 +583,12 @@ io.on('connection', function(webSocketConnection) {
     });
 
     webSocketConnection.on("messagedeleted", function(dataFromSocket) {
-        MongoClient.connect("mongodb://jessmani:azertyuiop75$@ds061196.mlab.com:61196/heroku_lmkffzfs", { useNewUrlParser: true }, function(err, database) {
+        MongoClient.connect("mongodb://jessmani:azertyuiop75$@ds139992.mlab.com:39992/heroku_z7glj4q8", { useNewUrlParser: true }, function(err, database) {
             if(err) {
                 return console.log("Erreur de connection");
             }
 
-            const myDb = database.db("heroku_lmkffzfs");
+            const myDb = database.db("heroku_z7glj4q8");
             const collection = myDb.collection("users");
 
             collection.find().toArray(function(err, dataDB) { 
@@ -622,12 +622,12 @@ io.on('connection', function(webSocketConnection) {
     });
 
     webSocketConnection.on("messagedeletedseconduser", function(dataFromSocket) {
-        MongoClient.connect("mongodb://jessmani:azertyuiop75$@ds061196.mlab.com:61196/heroku_lmkffzfs", { useNewUrlParser: true }, function(err, database) {
+        MongoClient.connect("mongodb://jessmani:azertyuiop75$@ds139992.mlab.com:39992/heroku_z7glj4q8", { useNewUrlParser: true }, function(err, database) {
             if(err) {
                 return console.log("Erreur de connection");
             }
 
-            const myDb = database.db("heroku_lmkffzfs");
+            const myDb = database.db("heroku_z7glj4q8");
             const collection = myDb.collection("users");
 
             collection.find().toArray(function(err, dataDB) { 
@@ -661,13 +661,13 @@ io.on('connection', function(webSocketConnection) {
     });
 
     webSocketConnection.on('disconnect', function() {
-        MongoClient.connect("mongodb://jessmani:azertyuiop75$@ds061196.mlab.com:61196/heroku_lmkffzfs", function(err, database) {
+        MongoClient.connect("mongodb://jessmani:azertyuiop75$@ds139992.mlab.com:39992/heroku_z7glj4q8", function(err, database) {
             if(err) {
                 return console.log("Erreur connection");
             }
 
             
-            const myDb = database.db("heroku_lmkffzfs");
+            const myDb = database.db("heroku_z7glj4q8");
             const collection = myDb.collection("users");
 
             collection.find().toArray(function(err, dataDB) { 
